@@ -14,5 +14,5 @@ jobs:
 
       - name: Build and Test
         run: |
-          "cd /var/www/test-ci-cd && git reset --hard && git pull"
+          "cd /var/www/test-ci-cd && git pull origin main"
           echo "anaaa......"
