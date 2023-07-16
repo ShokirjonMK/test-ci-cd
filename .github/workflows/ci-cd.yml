@@ -14,5 +14,6 @@ jobs:
 
       - name: Build and Test
         run: |
+          "curl https://ifconfig.me"
           "cd /var/www/test-ci-cd && git pull origin main"
           echo "anaaa......"
