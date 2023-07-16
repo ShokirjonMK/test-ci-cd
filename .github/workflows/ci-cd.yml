@@ -14,5 +14,5 @@ jobs:
 
       - name: Build and Test
         run: |
-          # Add your build and test commands here
-          echo "Building and testing the code"
+          "cd /var/www/test-ci-cd && git reset --hard && git pull"
+          echo "anaaa......"
