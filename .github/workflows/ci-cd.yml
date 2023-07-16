@@ -12,7 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and Test
+      - name: pull
+       
         run: |
-          "cd /var/www/test-ci-cd && git pull origin main"
-          echo "anaaa......"
+          - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+          - echo "Deploying the PROD project..."
+          - ssh -tt -o StrictHostKeyChecking=no $SSH_HOST \ 
+          "cd /path/to/project-folder/ && git reset --hard && git pull"
+          - echo "Deploying the ci cd ana anaaa..."
